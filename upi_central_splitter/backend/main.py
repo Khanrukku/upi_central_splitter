@@ -8,13 +8,7 @@ import uuid, time
 
 app = FastAPI(title="UPI Centralized Splitter (Prototype)")
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+
 
 # In-memory store for demo. In production, use a database.
 BILLS: Dict[str, dict] = {}
